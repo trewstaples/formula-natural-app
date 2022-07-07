@@ -45,7 +45,6 @@ const styles = {
   firstScreenMainWrap: {
     width: '828px',
     height: '558px',
-    border: '2px solid blue',
   },
 };
 
@@ -70,9 +69,9 @@ const FirstScreen = () => {
           </Box>
 
           <Box sx={styles.firstScreenMainWrap}>
-            <Box>
+            <div>
               <img src="img/food-pack-1.png" alt="Две пачкм корма Food Natural" />
-            </Box>
+            </div>
           </Box>
         </Box>
       </Box>
