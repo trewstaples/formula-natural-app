@@ -1,10 +1,7 @@
 import { Box } from '@mui/system';
 
-import { MenuItem } from '../menu-item';
 import { DogIcon } from './dog';
 import { CatIcon } from './cat';
-
-const menuItems = [<DogIcon />, <CatIcon />, 'В магазин', 'Акции', 'Контакты', 'О производители'];
 
 const styles = {
   menuList: {
@@ -12,7 +9,6 @@ const styles = {
     alignItems: 'center',
     gap: '48px',
   },
-
   menuItem: {
     fontStyle: 'normal',
     fontWeight: '600',
@@ -22,16 +18,24 @@ const styles = {
     color: 'white',
   },
 };
+//NOTE: Как сделать fill у svg?
+const menuItems = [<DogIcon />, <CatIcon />, 'В магазин', 'Акции', 'Контакты', 'О производителе'];
 
 const Menu = () => {
   return (
-    <Box component="nav">
+    <nav>
       <Box component="ul" sx={styles.menuList}>
         {menuItems.map((menuItem) => {
-          return <MenuItem menuItemStyle={styles.menuItem} menuItem={menuItem} />;
+          return (
+            <li>
+              <Box component="a" href="/" sx={styles.menuItem}>
+                {menuItem}
+              </Box>
+            </li>
+          );
         })}
       </Box>
-    </Box>
+    </nav>
   );
 };
 

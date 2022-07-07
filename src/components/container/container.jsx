@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 const styles = {
   container: {
     width: '1312px',
-    margin: 'auto',
+    marginTop: '1000px',
   },
 };
 
