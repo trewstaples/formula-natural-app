@@ -1,9 +1,11 @@
-const MenuItem = ({ menuItem, styles }) => {
+import { Box } from '@mui/system';
+
+const MenuItem = ({ menuItemStyle, menuItem }) => {
   return (
     <li className="menu__item">
-      <a href="/" class="menu__link" style={styles}>
+      <Box component="a" sx={menuItemStyle}>
         {menuItem}
-      </a>
+      </Box>
     </li>
   );
 };

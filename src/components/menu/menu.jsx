@@ -1,10 +1,10 @@
-import { MenuIcon } from '../menu-icon';
+import { Box } from '@mui/system';
+
 import { MenuItem } from '../menu-item';
 import { DogIcon } from './dog';
 import { CatIcon } from './cat';
 
-const menuItems = ['В магазин', 'Акции', 'Контакты', 'О производители'];
-const menuIcons = [<DogIcon />, <CatIcon />];
+const menuItems = [<DogIcon />, <CatIcon />, 'В магазин', 'Акции', 'Контакты', 'О производители'];
 
 const styles = {
   menuList: {
@@ -13,7 +13,7 @@ const styles = {
     gap: '48px',
   },
 
-  menuListA: {
+  menuItem: {
     fontStyle: 'normal',
     fontWeight: '600',
     fontSize: '15px',
@@ -25,17 +25,13 @@ const styles = {
 
 const Menu = () => {
   return (
-    <nav className="menu">
-      <ul className="menu__list" style={styles.menuList}>
-        {menuIcons.map((menuIcon) => (
-          <MenuIcon menuIcon={menuIcon} styles={styles.menuListA} />
-        ))}
-
-        {menuItems.map((menuItem) => (
-          <MenuItem menuItem={menuItem} styles={styles.menuListA} />
-        ))}
-      </ul>
-    </nav>
+    <Box component="nav">
+      <Box component="ul" sx={styles.menuList}>
+        {menuItems.map((menuItem) => {
+          return <MenuItem menuItemStyle={styles.menuItem} menuItem={menuItem} />;
+        })}
+      </Box>
+    </Box>
   );
 };
 

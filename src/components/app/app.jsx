@@ -1,11 +1,7 @@
-import { Header } from "../header";
+import { Header } from '../header';
 
 const App = () => {
-    return (
-        <div className="container">
-            <Header />
-        </div>
-    )
-}
+  return <Header />;
+};
 
 export { App };

@@ -1,22 +1,14 @@
+import { Box } from '@mui/system';
+
+import { Container } from '../container';
 import { HeaderLogo } from './header-logo';
 import { Menu } from '../menu';
-
-// .header {
-//     width: 100%;
-//     max-height: 80px;
-//     background-color: rgb(40, 171, 226);
-// }
 
 const styles = {
   header: {
     width: '100%',
-    maxHeight: '80px',
-    backgroundColor: ' rgb(40, 171, 226)',
-  },
-
-  container: {
-    width: '1312px',
-    margin: 'auto',
+    height: '80px',
+    backgroundColor: '#28abe2',
   },
   headerWrap: {
     display: 'flex',
@@ -35,21 +27,19 @@ const styles = {
 
 const Header = () => {
   return (
-    <header className="header" style={styles.header}>
-      <div className="container" style={styles.container}>
-        <div className="header__wrap" style={styles.headerWrap}>
-          <div className="header__logo-wrap">
+    <Box component="header" sx={styles.header}>
+      <Container>
+        <Box sx={styles.headerWrap}>
+          <Box>
             <HeaderLogo />
-          </div>
+          </Box>
 
-          <div className="header__menu" style={styles.headerMenu}>
+          <Box sx={styles.headerMenu}>
             <Menu />
-          </div>
-
-          <div className="header__social"></div>
-        </div>
-      </div>
-    </header>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
