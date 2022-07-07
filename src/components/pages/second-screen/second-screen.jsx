@@ -23,7 +23,7 @@ const styles = {
   secondScreenDogImage: {
     position: 'relative',
     right: '60%',
-    bottom: '0.5%', //NOTE: Отступы не работают??
+    bottom: '0.5%',
   },
   secondScreenInfoFlex: {
     display: 'flex',
