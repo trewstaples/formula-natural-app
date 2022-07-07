@@ -1,6 +1,5 @@
 import { Box } from '@mui/system';
 
-import { Container } from '../container';
 import { HeaderLogo } from './header-logo';
 import { Menu } from '../menu';
 
@@ -10,6 +9,10 @@ const socials = [
 ];
 
 const styles = {
+  container: {
+    width: '1312px',
+    margin: 'auto',
+  },
   header: {
     width: '100%',
     height: '80px',
@@ -45,7 +48,7 @@ const styles = {
 const Header = () => {
   return (
     <Box component="header" sx={styles.header}>
-      <Container>
+      <Box sx={styles.container}>
         <Box sx={styles.headerWrap}>
           <div>
             <HeaderLogo />
@@ -67,7 +70,7 @@ const Header = () => {
             </Box>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };
