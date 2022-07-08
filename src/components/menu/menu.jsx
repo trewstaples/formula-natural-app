@@ -19,13 +19,13 @@ const styles = {
   },
 };
 //NOTE: Как сделать fill у svg?
-const menuItems = [<DogIcon />, <CatIcon />, 'В магазин', 'Акции', 'Контакты', 'О производителе'];
+const MENU_ITEMS = [<DogIcon />, <CatIcon />, 'В магазин', 'Акции', 'Контакты', 'О производителе'];
 
 const Menu = () => {
   return (
     <nav>
       <Box component="ul" sx={styles.menuList}>
-        {menuItems.map((menuItem) => {
+        {MENU_ITEMS.map((menuItem) => {
           return (
             <li>
               <Box component="a" href="/" sx={styles.menuItem}>

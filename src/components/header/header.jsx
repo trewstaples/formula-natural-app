@@ -5,10 +5,11 @@ import { Container } from '../container';
 import { HeaderLogo } from './header-logo';
 import { Menu } from '../menu';
 
-const socials = [
+const SOCIALS = [
   { src: 'img/phone-logo.svg', href: '/', alt: 'Иконка телефонного звонка' },
   { src: 'img/vk-logo.svg', href: 'https://vk.com/formulanatural', alt: 'Иконка Вконтакте' }, //NOTE Лучше делать иконки в чистом svg или в img норм?
 ];
+//NOTE: Как записывать константы?
 
 const HEADER_PARAMETS = {
   HEIGHT: '80px',
@@ -65,7 +66,7 @@ const Header = () => {
 
             <Box sx={styles.headerSocial}>
               <Box component="ul" sx={styles.socialIconsList}>
-                {socials.map((social) => (
+                {SOCIALS.map((social) => (
                   <li>
                     <a href={social.href}>
                       <img src={social.src} alt={social.alt}></img>

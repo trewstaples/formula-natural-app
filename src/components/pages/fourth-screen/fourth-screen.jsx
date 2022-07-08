@@ -2,14 +2,14 @@ import { Box } from '@mui/system';
 
 const FOOD_PACKAGE_URL = 'img/food-pack-3.png';
 
-const benefits = [
+const BENEFITS = [
   { alt: 'Иконка колоса', src: 'img/corn.svg' },
   { alt: 'Иконка шерсти', src: 'img/wool.svg' },
   { alt: 'Иконка суставов', src: 'img/joints.svg' },
   { alt: 'Иконка юкки', src: 'img/yucca.svg' },
 ];
 
-const checklistIcons = [
+const CHECKLIST_ICONS = [
   { alt: 'Иконка 1 килограмм', src: 'img/1-killo.svg' },
   { alt: 'Иконка 2,5 килограмм', src: 'img/2,5-killo.svg' },
   { alt: 'Иконка 7 килограмм', src: 'img/7-killo.svg' },
@@ -77,7 +77,7 @@ const FourthScreen = () => (
 
         <div>
           <ul>
-            {benefits.map((benefit) => (
+            {BENEFITS.map((benefit) => (
               <li>
                 <button>
                   <img src={benefit.src} width="85.56" height="86.56" alt={benefit.alt} />
@@ -94,7 +94,7 @@ const FourthScreen = () => (
 
       <div>
         <ul>
-          {checklistIcons.map((icon) => (
+          {CHECKLIST_ICONS.map((icon) => (
             <li>
               <img src={icon.src} alt={icon.alt} />
             </li>
