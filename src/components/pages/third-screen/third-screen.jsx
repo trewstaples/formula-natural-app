@@ -29,25 +29,22 @@ const styles = {
   },
 };
 
-const ThirdScreen = () => {
-  return (
-    <Box sx={styles.thirdScreenWrap}>
-      <Box sx={styles.thirdScreenMain}>
-        <img src="img/granule.png" width="736" height="484" alt="Картинка гранулы" />
-      </Box>
-
-      <Box sx={styles.thirdScreenInfo}>
-        <p>
-          Корма Fórmula Natural разработаны под контролем команды ветеринаров. <br />
-          <br />
-          Продуман до мелочей не только состав, но и форма. Каждый крокет спроектирован для комфортного жевания, что позволяет зубам и деснам
-          животного оставаться здоровыми. <br />
-          <br />
-          Fórmula Natural — формула заботы и здоровья для питомца
-        </p>
-      </Box>
+const ThirdScreen = () => (
+  <Box sx={styles.thirdScreenWrap}>
+    <Box sx={styles.thirdScreenMain}>
+      <img src="img/granule.png" width="736" height="484" alt="Картинка гранулы" />
     </Box>
-  );
-};
 
+    <Box sx={styles.thirdScreenInfo}>
+      <p>
+        Корма Fórmula Natural разработаны под контролем команды ветеринаров. <br />
+        <br />
+        Продуман до мелочей не только состав, но и форма. Каждый крокет спроектирован для комфортного жевания, что позволяет зубам и деснам животного
+        оставаться здоровыми. <br />
+        <br />
+        Fórmula Natural — формула заботы и здоровья для питомца
+      </p>
+    </Box>
+  </Box>
+);
 export { ThirdScreen };

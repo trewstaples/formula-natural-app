@@ -36,31 +36,28 @@ const styles = {
   },
 };
 
-const FirstScreen = () => {
-  return (
-    <Box sx={styles.firstScreenWrap}>
-      <Box sx={styles.firstScreenInfo}>
-        <Box sx={styles.firstScreenInfoItems}>
-          <Box component="p" sx={styles.firstScreenTitle}>
-            Передовое <br />
-            питание
-          </Box>
-          <Box component="p" sx={styles.firstScreenSign}>
-            корма класса супер премиум
-          </Box>
+const FirstScreen = () => (
+  <Box sx={styles.firstScreenWrap}>
+    <Box sx={styles.firstScreenInfo}>
+      <Box sx={styles.firstScreenInfoItems}>
+        <Box component="p" sx={styles.firstScreenTitle}>
+          Передовое <br />
+          питание
         </Box>
-        <Box>
-          <img src="img/brazil.png" width="296" height="56" alt="Сделано в Бразилии" />
+        <Box component="p" sx={styles.firstScreenSign}>
+          корма класса супер премиум
         </Box>
       </Box>
-
-      <Box sx={styles.firstScreenMainWrap}>
-        <div>
-          <img src="img/food-pack-1.png" alt="Две пачкм корма Food Natural" />
-        </div>
+      <Box>
+        <img src="img/brazil.png" width="296" height="56" alt="Сделано в Бразилии" />
       </Box>
     </Box>
-  );
-};
 
+    <Box sx={styles.firstScreenMainWrap}>
+      <div>
+        <img src="img/food-pack-1.png" alt="Две пачкм корма Food Natural" />
+      </div>
+    </Box>
+  </Box>
+);
 export { FirstScreen };

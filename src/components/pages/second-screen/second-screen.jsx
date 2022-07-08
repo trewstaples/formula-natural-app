@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-// background: "url('img/background-2.jpg')",
+
 const styles = {
   secondScreenFlexWrap: {
     display: 'flex',
@@ -50,48 +50,45 @@ const styles = {
   },
 };
 
-const SecondScreen = () => {
-  return (
-    <Box sx={styles.secondScreenFlexWrap}>
-      <Box sx={styles.secondScreenMain}>
-        <Box component="img" src="img/dog+bg.png" alt="Картинка собаки" sx={styles.secondScreenDogImage}></Box>
+const SecondScreen = () => (
+  <Box sx={styles.secondScreenFlexWrap}>
+    <Box sx={styles.secondScreenMain}>
+      <Box component="img" src="img/dog+bg.png" alt="Картинка собаки" sx={styles.secondScreenDogImage}></Box>
+    </Box>
+
+    <Box sx={styles.secondScreenInfoFlex}>
+      <Box sx={styles.secondScreenInfoItems}>
+        <div>
+          <Box component="p" sx={styles.secondScreenTitle}>
+            human grade
+          </Box>
+          <Box component="p" sx={styles.secondScreenSign}>
+            ингредиенты
+          </Box>
+        </div>
+
+        <div>
+          <Box component="p" sx={styles.secondScreenTitle}>
+            28%
+          </Box>
+          <Box component="p" sx={styles.secondScreenSign}>
+            протеина
+          </Box>
+        </div>
+
+        <div>
+          <Box component="p" sx={styles.secondScreenTitle}>
+            натуральные
+          </Box>
+          <Box component="p" sx={styles.secondScreenSign}>
+            антидиоксиданты
+          </Box>
+        </div>
       </Box>
-
-      <Box sx={styles.secondScreenInfoFlex}>
-        <Box sx={styles.secondScreenInfoItems}>
-          <div>
-            <Box component="p" sx={styles.secondScreenTitle}>
-              human grade
-            </Box>
-            <Box component="p" sx={styles.secondScreenSign}>
-              ингредиенты
-            </Box>
-          </div>
-
-          <div>
-            <Box component="p" sx={styles.secondScreenTitle}>
-              28%
-            </Box>
-            <Box component="p" sx={styles.secondScreenSign}>
-              протеина
-            </Box>
-          </div>
-
-          <div>
-            <Box component="p" sx={styles.secondScreenTitle}>
-              натуральные
-            </Box>
-            <Box component="p" sx={styles.secondScreenSign}>
-              антидиоксиданты
-            </Box>
-          </div>
-        </Box>
-        <Box sx={styles.secondScreenFoodPack}>
-          <img src="img/food-pack-2.png" alt="Пачка корма Food Natural" />
-        </Box>
+      <Box sx={styles.secondScreenFoodPack}>
+        <img src="img/food-pack-2.png" alt="Пачка корма Food Natural" />
       </Box>
     </Box>
-  );
-};
-
+  </Box>
+);
 export { SecondScreen };
