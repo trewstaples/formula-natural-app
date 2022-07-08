@@ -1,7 +1,7 @@
 import { Box } from '@mui/system';
 
 const styles = {
-  secondScreenFlexWrap: {
+  secondScreenWrap: {
     display: 'flex',
     maxHeight: '700px',
   },
@@ -9,12 +9,12 @@ const styles = {
     position: 'relative',
     width: '556px',
   },
-  secondScreenDogImage: {
+  secondScreenDog: {
     position: 'relative',
     right: '60%',
     bottom: '0.5%',
   },
-  secondScreenInfoFlex: {
+  secondScreenInfo: {
     display: 'flex',
     position: 'relative',
     alignItems: 'center',
@@ -28,18 +28,10 @@ const styles = {
     position: 'relative',
     left: '10.5%',
   },
-  secondScreenTitle: {
+  secondScreenText: {
     fontStyle: 'normal',
     fontWeight: '600',
     fontSize: '64px',
-    lineHeight: '89.93%',
-    textAlign: 'right',
-    color: '#FFFFFF',
-  },
-  secondScreenSign: {
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: '20px',
     lineHeight: '89.93%',
     textAlign: 'right',
     color: '#FFFFFF',
@@ -51,36 +43,36 @@ const styles = {
 };
 
 const SecondScreen = () => (
-  <Box sx={styles.secondScreenFlexWrap}>
+  <Box sx={styles.secondScreenWrap}>
     <Box sx={styles.secondScreenMain}>
-      <Box component="img" src="img/dog+bg.png" alt="Картинка собаки" sx={styles.secondScreenDogImage}></Box>
+      <Box component="img" src="img/dog+bg.png" alt="Картинка собаки" sx={styles.secondScreenDog}></Box>
     </Box>
 
-    <Box sx={styles.secondScreenInfoFlex}>
+    <Box sx={styles.secondScreenInfo}>
       <Box sx={styles.secondScreenInfoItems}>
         <div>
-          <Box component="p" sx={styles.secondScreenTitle}>
+          <Box component="p" sx={styles.secondScreenText}>
             human grade
           </Box>
-          <Box component="p" sx={styles.secondScreenSign}>
+          <Box component="p" sx={{ ...styles.secondScreenText, fontSize: '20px' }}>
             ингредиенты
           </Box>
         </div>
 
         <div>
-          <Box component="p" sx={styles.secondScreenTitle}>
+          <Box component="p" sx={styles.secondScreenText}>
             28%
           </Box>
-          <Box component="p" sx={styles.secondScreenSign}>
+          <Box component="p" sx={{ ...styles.secondScreenText, fontSize: '20px' }}>
             протеина
           </Box>
         </div>
 
         <div>
-          <Box component="p" sx={styles.secondScreenTitle}>
+          <Box component="p" sx={styles.secondScreenText}>
             натуральные
           </Box>
-          <Box component="p" sx={styles.secondScreenSign}>
+          <Box component="p" sx={{ ...styles.secondScreenText, fontSize: '20px' }}>
             антидиоксиданты
           </Box>
         </div>
