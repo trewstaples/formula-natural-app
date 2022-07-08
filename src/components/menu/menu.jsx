@@ -1,4 +1,5 @@
 import { Box } from '@mui/system';
+import { nanoid } from 'nanoid';
 
 import { CatIcon } from './cat';
 import { DogIcon } from './dog';
@@ -27,7 +28,7 @@ const Menu = () => {
       <Box component="ul" sx={styles.menuList}>
         {MENU_ITEMS.map((menuItem) => {
           return (
-            <li>
+            <li key={nanoid()}>
               <Box component="a" href="/" sx={styles.menuItem}>
                 {menuItem}
               </Box>

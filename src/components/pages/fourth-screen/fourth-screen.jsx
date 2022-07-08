@@ -1,4 +1,5 @@
 import { Box } from '@mui/system';
+import { nanoid } from 'nanoid';
 
 const FOOD_PACKAGE_URL = 'img/food-pack-3.png';
 
@@ -67,7 +68,7 @@ const FourthScreen = () => (
         <div>
           <ul>
             {BENEFITS.map((benefit) => (
-              <li>
+              <li key={nanoid()}>
                 <button>
                   <img src={benefit.src} width="85.56" height="86.56" alt={benefit.alt} />
                 </button>
@@ -84,7 +85,7 @@ const FourthScreen = () => (
       <div>
         <ul>
           {CHECKLIST_ICONS.map((icon) => (
-            <li>
+            <li key={nanoid()}>
               <img src={icon.src} alt={icon.alt} />
             </li>
           ))}

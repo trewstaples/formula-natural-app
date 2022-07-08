@@ -1,4 +1,5 @@
 import { Box } from '@mui/system';
+import { nanoid } from 'nanoid';
 
 import { Container } from '../container';
 import { HeaderLogo } from './header-logo';
@@ -60,7 +61,7 @@ const Header = () => {
           <Box sx={styles.headerSocial}>
             <Box component="ul" sx={styles.socialIconsList}>
               {SOCIALS.map((social) => (
-                <li>
+                <li key={nanoid()}>
                   <a href={social.href}>
                     <img src={social.src} alt={social.alt}></img>
                   </a>
