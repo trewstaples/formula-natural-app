@@ -1,5 +1,7 @@
 import { Box } from '@mui/system';
 
+import { Screen } from '../screen';
+import { Container } from '../container';
 import { HeaderLogo } from './header-logo';
 import { Menu } from '../menu';
 
@@ -8,15 +10,17 @@ const socials = [
   { src: 'img/vk-logo.svg', href: 'https://vk.com/formulanatural', alt: 'Иконка Вконтакте' }, //NOTE Лучше делать иконки в чистом svg или в img норм?
 ];
 
+const HEADER_PARAMETS = {
+  HEIGHT: '80px',
+  BACKGROUND: '#28abe2',
+};
+
 const styles = {
-  container: {
-    width: '1312px',
-    margin: 'auto',
-  },
   header: {
     width: '100%',
     height: '80px',
     backgroundColor: '#28abe2',
+    backgroundSize: '100% 100%',
   },
   headerWrap: {
     display: 'flex',
@@ -47,31 +51,33 @@ const styles = {
 
 const Header = () => {
   return (
-    <Box component="header" sx={styles.header}>
-      <Box sx={styles.container}>
-        <Box sx={styles.headerWrap}>
-          <div>
-            <HeaderLogo />
-          </div>
+    <Screen height={HEADER_PARAMETS.HEIGHT} background={HEADER_PARAMETS.BACKGROUND}>
+      <Container>
+        <Box component="header" sx={styles.header}>
+          <Box sx={styles.headerWrap}>
+            <div>
+              <HeaderLogo />
+            </div>
 
-          <Box sx={styles.headerMenu}>
-            <Menu />
-          </Box>
+            <Box sx={styles.headerMenu}>
+              <Menu />
+            </Box>
 
-          <Box sx={styles.headerSocial}>
-            <Box component="ul" sx={styles.socialIconsList}>
-              {socials.map((social) => (
-                <li>
-                  <a href={social.href}>
-                    <img src={social.src} alt={social.alt}></img>
-                  </a>
-                </li>
-              ))}
+            <Box sx={styles.headerSocial}>
+              <Box component="ul" sx={styles.socialIconsList}>
+                {socials.map((social) => (
+                  <li>
+                    <a href={social.href}>
+                      <img src={social.src} alt={social.alt}></img>
+                    </a>
+                  </li>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
-    </Box>
+      </Container>
+    </Screen>
   );
 };
 
