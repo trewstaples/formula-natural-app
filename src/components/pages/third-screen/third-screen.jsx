@@ -10,6 +10,7 @@ const styles = {
     paddingTop: '100px',
     paddingBottom: '100px',
     maxHeight: '700px',
+    // backgroundColor: '#E7F3FF', //NOTE: Как это реализовать?
   },
   thirdScreenMain: {
     width: '822px',

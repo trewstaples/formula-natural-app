@@ -25,8 +25,8 @@ const styles = {
   },
   fourthScreenInfo: {
     display: 'flex',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'space-between',
     width: '836px',
   },
   fourthScreenDescription: {
@@ -38,21 +38,10 @@ const styles = {
     height: '580px',
     border: '2px solid red',
   },
-  fourthScreenTitle: {
+  fourthScreenText: {
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: '76.4px',
-    lineHeight: '89.93%',
-
-    letterSpacing: ' -0.04em',
-    textTransform: 'uppercase',
-
-    color: '#28ABE2',
-  },
-  fourthScreenSign: {
-    fontStyle: 'normal',
-    fontWeight: '500',
-    fontSize: '26.4px',
     lineHeight: '89.93%',
 
     letterSpacing: ' -0.04em',
@@ -71,8 +60,8 @@ const FourthScreen = () => (
     <Box sx={styles.fourthScreenInfo}>
       <Box sx={styles.fourthScreenDescription}>
         <div>
-          <p sx={styles.fourthScreenTitle}>Cобаки</p>
-          <p sx={styles.fourthScreenSign}>маленьких и мини пород</p>
+          <p sx={styles.fourthScreenText}>Cобаки</p>
+          <p sx={{ ...styles.fourthScreenText, fontSize: '26.4px' }}>маленьких и мини пород</p>
         </div>
 
         <div>
