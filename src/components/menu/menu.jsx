@@ -1,7 +1,7 @@
 import { Box } from '@mui/system';
 
-import { DogIcon } from './dog';
 import { CatIcon } from './cat';
+import { DogIcon } from './dog';
 
 const styles = {
   menuList: {

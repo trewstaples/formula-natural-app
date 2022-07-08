@@ -16,17 +16,10 @@ const styles = {
   firstScreenInfoItems: {
     marginTop: '72px',
   },
-  firstScreenTitle: {
+  firstScreenText: {
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: '96px',
-    lineHeight: '89.93%',
-    color: '#28ABE2',
-  },
-  firstScreenSign: {
-    fontStyle: 'normal',
-    fontWeight: '500',
-    fontSize: '34px',
     lineHeight: '89.93%',
     color: '#28ABE2',
   },
@@ -40,22 +33,22 @@ const FirstScreen = () => (
   <Box sx={styles.firstScreenWrap}>
     <Box sx={styles.firstScreenInfo}>
       <Box sx={styles.firstScreenInfoItems}>
-        <Box component="p" sx={styles.firstScreenTitle}>
+        <Box component="p" sx={styles.firstScreenText}>
           Передовое <br />
           питание
         </Box>
-        <Box component="p" sx={styles.firstScreenSign}>
+        <Box component="p" sx={{ ...styles.firstScreenText, fontSize: '34px' }}>
           корма класса супер премиум
         </Box>
       </Box>
-      <Box>
+      <div>
         <img src="img/brazil.png" width="296" height="56" alt="Сделано в Бразилии" />
-      </Box>
+      </div>
     </Box>
 
     <Box sx={styles.firstScreenMainWrap}>
       <div>
-        <img src="img/food-pack-1.png" alt="Две пачкм корма Food Natural" />
+        <img src="img/food-pack-1.png" alt="Две пачки корма Food Natural" />
       </div>
     </Box>
   </Box>

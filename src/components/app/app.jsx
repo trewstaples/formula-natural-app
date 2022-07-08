@@ -3,11 +3,11 @@ import { MainPage } from '../pages/main-page';
 
 const App = () => {
   return (
-    <div>
+    <body>
       <Header />
 
       <MainPage />
-    </div>
+    </body>
   );
 };
 

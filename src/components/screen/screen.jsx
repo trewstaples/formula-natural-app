@@ -9,7 +9,7 @@ const styles = {
 
 const Screen = ({ children, background = '', height = REGULAR_SCREEN_HEIGHT, component = 'div' }) => {
   return (
-    <Box component={component} sx={{ ...styles, background: background, height: height }}>
+    <Box component={component} sx={{ background: background, height: height, ...styles }}>
       {children}
     </Box>
   );
