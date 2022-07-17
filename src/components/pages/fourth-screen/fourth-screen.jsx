@@ -15,7 +15,7 @@ const CHECKLIST_ICONS = [
   { alt: 'Иконка 7 килограмм', src: 'img/7-killo.svg' },
   { alt: 'Иконка 2,5 килограмм', src: 'img/2,5-killo.svg' },
   { alt: 'Иконка 1 килограмм', src: 'img/1-killo.svg' },
-  { alt: 'Иконка фракционной упаковки', src: 'img/fraction-package.png' },
+  // { alt: 'Иконка фракционной упаковки', src: 'img/fraction-pack.svg' },
 ];
 
 const styles = {
@@ -41,6 +41,7 @@ const styles = {
   fourthScreenIconsList: {
     display: 'flex',
     marginBottom: '68px',
+    marginRight: '100px',
   },
   fourthScreenText: {
     fontStyle: 'normal',
@@ -72,6 +73,7 @@ const styles = {
   },
   fourthScreenMain: {
     display: 'flex',
+    alignItems: 'flex-start',
     width: '652px',
     border: '2px solid blue',
   },
@@ -117,7 +119,9 @@ const FourthScreen = () => (
           ))}
         </ul>
       </div>
-      <img src={FOOD_PACKAGE_URL} alt="Пачка корма Formula Natural" />
+      <div>
+        <img width="369" height="574" src={FOOD_PACKAGE_URL} alt="Пачка корма Formula Natural" />
+      </div>
     </Box>
   </Box>
 );
