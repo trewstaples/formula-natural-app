@@ -25,7 +25,7 @@ const styles = {
   fourthScreenInfo: {
     display: 'flex',
     flexDirection: 'column',
-    width: '720px',
+    width: '620px',
     height: '586px',
     paddingLeft: '122px',
 
@@ -73,7 +73,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-start',
     width: '592px',
-    border: '2px solid blue',
+    // border: '2px solid blue',
   },
 };
 

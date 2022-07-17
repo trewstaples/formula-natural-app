@@ -6,8 +6,8 @@ const styles = {
   border: '2px solid black',
 };
 
-const Container = ({ children }) => {
-  return <Box sx={styles}>{children}</Box>;
+const Container = ({ children, flexStyles }) => {
+  return <Box sx={{ ...styles, ...flexStyles }}>{children}</Box>;
 };
 
 export { Container };
