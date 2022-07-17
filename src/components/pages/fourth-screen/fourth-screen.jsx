@@ -11,33 +11,36 @@ const BENEFITS = [
 ];
 
 const CHECKLIST_ICONS = [
-  { alt: 'Иконка 1 килограмм', src: 'img/1-killo.svg' },
-  { alt: 'Иконка 2,5 килограмм', src: 'img/2,5-killo.svg' },
-  { alt: 'Иконка 7 килограмм', src: 'img/7-killo.svg' },
   { alt: 'Иконка 15 килограмм', src: 'img/15-killo.svg' },
+  { alt: 'Иконка 7 килограмм', src: 'img/7-killo.svg' },
+  { alt: 'Иконка 2,5 килограмм', src: 'img/2,5-killo.svg' },
+  { alt: 'Иконка 1 килограмм', src: 'img/1-killo.svg' },
   { alt: 'Иконка фракционной упаковки', src: 'img/fraction-package.png' },
 ];
 
 const styles = {
   fourthScreenWrap: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
+    marginTop: '17px',
   },
   fourthScreenInfo: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '836px',
-  },
-  fourthScreenDescription: {
-    display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     width: '720px',
-    height: '580px',
+    height: '586px',
+    paddingLeft: '122px',
+
     border: '2px solid red',
+  },
+  infoTitle: {
+    width: '400px',
+    height: '100px',
+    marginBottom: '60px',
+  },
+  fourthScreenIconsList: {
+    display: 'flex',
+    marginBottom: '68px',
   },
   fourthScreenText: {
     fontStyle: 'normal',
@@ -50,8 +53,26 @@ const styles = {
 
     color: '#28ABE2',
   },
+  fourthScreenButton: {
+    width: '278px',
+    height: '66px',
+    background: 'none',
+    border: '1.91398px solid #28ABE2',
+    borderRadius: '47.8495px',
+
+    fontFamily: 'Museo Sans Cyrl',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '30.6237px',
+    lineHeight: '89.93%',
+
+    letterSpacing: '-0.04em',
+
+    color: '#28ABE2',
+  },
   fourthScreenMain: {
-    width: '436px',
+    display: 'flex',
+    width: '652px',
     border: '2px solid blue',
   },
 };
@@ -59,29 +80,34 @@ const styles = {
 const FourthScreen = () => (
   <Box sx={styles.fourthScreenWrap}>
     <Box sx={styles.fourthScreenInfo}>
-      <Box sx={styles.fourthScreenDescription}>
-        <div>
-          <p sx={styles.fourthScreenText}>Cобаки</p>
-          <p sx={{ ...styles.fourthScreenText, fontSize: '26.4px' }}>маленьких и мини пород</p>
-        </div>
-
-        <div>
-          <ul>
-            {BENEFITS.map((benefit) => (
-              <li key={nanoid()}>
-                <button>
-                  <img src={benefit.src} width="85.56" height="86.56" alt={benefit.alt} />
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <button type="submit">Заказать сейчас</button>
-        </div>
+      <Box sx={styles.infoTitle}>
+        <Box component="p" sx={styles.fourthScreenText}>
+          Cобаки
+        </Box>
+        <Box component="p" sx={{ ...styles.fourthScreenText, fontSize: '26.4px' }}>
+          маленьких и мини пород
+        </Box>
       </Box>
 
+      <div>
+        <Box component="ul" sx={styles.fourthScreenIconsList}>
+          {BENEFITS.map((benefit) => (
+            <li key={nanoid()}>
+              <img src={benefit.src} alt={benefit.alt} onClick={() => console.log(0)} />
+            </li>
+          ))}
+        </Box>
+      </div>
+
+      <div>
+        <Box component="button" sx={styles.fourthScreenButton}>
+          заказать сейчас
+        </Box>
+        {/* <button type="submit">Заказать сейчас</button> */}
+      </div>
+    </Box>
+
+    <Box sx={styles.fourthScreenMain}>
       <div>
         <ul>
           {CHECKLIST_ICONS.map((icon) => (
@@ -91,9 +117,6 @@ const FourthScreen = () => (
           ))}
         </ul>
       </div>
-    </Box>
-
-    <Box sx={styles.fourthScreenMain}>
       <img src={FOOD_PACKAGE_URL} alt="Пачка корма Formula Natural" />
     </Box>
   </Box>
