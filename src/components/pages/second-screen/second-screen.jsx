@@ -38,7 +38,7 @@ const styles = {
   },
   secondScreenFoodPack: {
     position: 'relative',
-    right: '20%',
+    left: '8%',
   },
 };
 

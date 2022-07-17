@@ -48,7 +48,7 @@ const FirstScreen = () => (
 
     <Box sx={styles.firstScreenMainWrap}>
       <div>
-        <img src="img/food-pack-1.png" alt="Две пачки корма Food Natural" />
+        <img src="img/food-packs.png" alt="Две пачки корма Food Natural" />
       </div>
     </Box>
   </Box>

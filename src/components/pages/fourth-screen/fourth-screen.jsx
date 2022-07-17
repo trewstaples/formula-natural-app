@@ -1,8 +1,6 @@
 import { Box } from '@mui/system';
 import { nanoid } from 'nanoid';
 
-const FOOD_PACKAGE_URL = 'img/food-pack-3.png';
-
 const BENEFITS = [
   { alt: 'Иконка колоса', src: 'img/corn.svg' },
   { alt: 'Иконка шерсти', src: 'img/wool.svg' },
@@ -74,12 +72,12 @@ const styles = {
   fourthScreenMain: {
     display: 'flex',
     alignItems: 'flex-start',
-    width: '652px',
+    width: '592px',
     border: '2px solid blue',
   },
 };
 
-const FourthScreen = () => (
+const FourthScreen = ({ packageUrl }) => (
   <Box sx={styles.fourthScreenWrap}>
     <Box sx={styles.fourthScreenInfo}>
       <Box sx={styles.infoTitle}>
@@ -120,7 +118,7 @@ const FourthScreen = () => (
         </ul>
       </div>
       <div>
-        <img width="369" height="574" src={FOOD_PACKAGE_URL} alt="Пачка корма Formula Natural" />
+        <img src={packageUrl} alt="Пачка корма Formula Natural" />
       </div>
     </Box>
   </Box>
