@@ -28,8 +28,6 @@ const styles = {
     width: '620px',
     height: '586px',
     paddingLeft: '122px',
-
-    border: '2px solid red',
   },
   infoTitle: {
     width: '400px',
